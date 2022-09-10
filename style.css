@@ -1,0 +1,824 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fa-arrow-up {
+  position: fixed;
+  z-index: 10;
+  font-size: 2rem;
+  background-color: white;
+  color: black;
+  top: 50%;
+  right: 0%;
+  padding: 0.8rem;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.fa-arrow-up:hover {
+  background-color: rgb(209, 209, 209);
+}
+/* 
+  .navbar {
+    position: fixed;
+    width: 100%;
+  } */
+
+.bg {
+  background-color: black;
+  padding: 1.5rem;
+}
+
+/* .borderBottom {
+    border-bottom: 0.01rem solid rgb(255, 255, 255);
+  } */
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(79, 79, 79);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar a:hover {
+  /* border-bottom: 0.15rem solid tomato; */
+  box-shadow: 1px 1px 1px 1px rgb(255, 252, 189);
+  color: rgb(219, 218, 218);
+  border-radius: 0.3rem;
+}
+
+@keyframes linkAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sectionWidth {
+  width: 85%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.fullWidth {
+  background-color: black;
+  color: white;
+}
+
+.homePage {
+  color: white;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.homePage p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.homePage img {
+  width: 20rem;
+  height: 26rem;
+  border-radius: 0.5rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details h2 {
+  font-size: 1.8rem;
+}
+
+#Iam {
+  font-size: 1.8rem;
+}
+
+.details h1 {
+  font-size: 2.8rem;
+}
+
+#name {
+  color: tomato;
+}
+
+p {
+  font-size: 1.06rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.about {
+  position: relative;
+}
+
+.about h2 {
+  color: rgb(187, 187, 187);
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.headingBorder::before {
+  content: "";
+  position: absolute;
+  top: 6.8rem;
+  left: 0;
+  margin-left: 3rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgb(213, 213, 213);
+  z-index: 1;
+}
+
+.headingBorder::after {
+  content: "";
+  position: absolute;
+  top: 6.8rem;
+  left: 0;
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+  width: 20%;
+  height: 0.1rem;
+  background: linear-gradient(to right, red, blue);
+}
+
+.education {
+  position: relative;
+}
+
+.education p {
+  text-align: left;
+}
+
+.education h2 {
+  color: rgb(255, 151, 243);
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.highSchool,
+.puc,
+.engineering {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 5rem;
+  /* background-color: aliceblue; */
+  color: rgb(255, 255, 255);
+}
+
+.grade {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.percentageBar {
+  position: relative;
+  width: 80%;
+  height: 0.3rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5rem;
+}
+
+.highSchool .percentageBar::after {
+  content: "";
+  position: absolute;
+  width: 89.3%;
+  height: 0.3rem;
+  background-color: rgb(0, 149, 160);
+  border-radius: 5rem;
+}
+
+.puc .percentageBar::after {
+  content: "";
+  position: absolute;
+  width: 91.33%;
+  height: 0.3rem;
+  background-color: rgb(0, 149, 160);
+  border-radius: 5rem;
+}
+
+.engineering .percentageBar::after {
+  content: "";
+  position: absolute;
+  width: 81.5%;
+  height: 0.3rem;
+  background-color: rgb(0, 149, 160);
+  border-radius: 5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  margin-bottom: 0.5rem;
+}
+
+.qualification .highSchool span {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 68.8%;
+  background-color: rgb(255, 145, 145);
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.qualification .puc span {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 70.8%;
+  background-color: rgb(255, 145, 145);
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.qualification .engineering span {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 62.8%;
+  background-color: rgb(255, 145, 145);
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+/* .qualification span::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    border-bottom: 0.5rem solid rgb(255, 145, 145);
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+  }
+  
+  .qualification .puc span::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: 1.3rem;
+    border-bottom: 0.5rem solid rgb(255, 145, 145);
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+  } */
+
+.projects {
+  position: relative;
+}
+
+.projects h2 {
+  color: rgb(252, 255, 95);
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.firstLine {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+}
+
+.secondLine {
+  margin-top: 1rem;
+}
+
+.internship,
+.workshops,
+.projectSection {
+  background-color: aquamarine;
+  color: black;
+  padding: 2rem;
+  border-radius: 25px 0px 25px 0px;
+}
+
+.skills {
+  position: relative;
+}
+
+.skills h2 {
+  color: rgb(204, 138, 255);
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3.5rem;
+}
+
+.skill-icons span {
+  font-size: 1.2rem;
+}
+
+.skill-icons .inline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-icons .web-dev,
+.skill-icons .design {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.skill-icons .fa-brands {
+  font-size: 4rem;
+  color: black;
+  background: linear-gradient(to right, rgb(255, 232, 190), rgb(255, 255, 186));
+  padding: 1rem 1.4rem;
+  border-radius: 0.5rem;
+}
+
+.skill-icons img {
+  background: linear-gradient(to right, rgb(255, 232, 190), rgb(255, 255, 186));
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.blogs {
+  position: relative;
+}
+
+.blogs a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.blogs li {
+  list-style: none;
+}
+
+.blogs h2 {
+  color: rgb(255, 172, 230);
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.blogs h3 {
+  font-size: 1.2rem;
+}
+
+.blog-list {
+  margin-top: 3.5rem;
+  width: 50%;
+}
+
+.blog-list a:hover {
+  color: rgb(163, 163, 163);
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contact-details i {
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-details i:hover {
+  color: rgb(195, 195, 195);
+}
+
+@media (max-width: 1095px) {
+  .details h1 {
+    font-size: 2rem;
+    transition: 1s;
+  }
+
+  .homePage img {
+    width: 18rem;
+    height: 24rem;
+    border-radius: 0.5rem;
+    transition: 1s;
+  }
+
+  .navbar ul {
+    gap: 3rem;
+    transition: 1s;
+  }
+
+  .details h2,
+  .details #Iam {
+    font-size: 1.5rem;
+    transition: 1s;
+  }
+
+  .homePage p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .homePage {
+    gap: 2rem;
+  }
+
+  .education h3 {
+    font-size: 1.2rem;
+    transition: 1s;
+  }
+
+  .education p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1035px) {
+  .education h3 {
+    font-size: 1rem;
+  }
+
+  .internship p {
+    text-align: left;
+  }
+
+  .education p {
+    font-size: 1rem;
+  }
+
+  .projects p {
+    font-size: 1rem;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 870px) {
+  .details h1 {
+    font-size: 1.5rem;
+    transition: 1s;
+  }
+
+  .highSchool,
+  .puc,
+  .engineering {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .schoolDetails h3,
+  .schoolDetails h4,
+  .schoolDetails p {
+    text-align: center;
+  }
+
+  .percentageBar {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .homePage img {
+    width: 16rem;
+    height: 22rem;
+    border-radius: 0.5rem;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 940px) {
+  .navbar ul {
+    gap: 2rem;
+    transition: 1s;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+    transition: 1s;
+  }
+
+  .projects p {
+    font-size: 0.9rem;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 765px) {
+  .navbar ul {
+    gap: 1rem;
+    transition: 1s;
+  }
+
+  .skill-icons .web-dev,
+  .skill-icons .design {
+    gap: 3rem;
+    transition: 1s;
+  }
+
+  .details h1 {
+    font-size: 1.3rem;
+    transition: 1s;
+  }
+
+  .homePage p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .details h2,
+  .details #Iam {
+    font-size: 1rem;
+    transition: 1s;
+  }
+
+  .blog-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 660px) {
+  .homePage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details h1 {
+    font-size: 2rem;
+    transition: 1s;
+  }
+
+  .navbar ul {
+    gap: 3rem;
+    transition: 1s;
+  }
+
+  /* .navbar ul {
+      opacity: 0;
+    } */
+
+  .details h2,
+  .details #Iam {
+    font-size: 1.5rem;
+    transition: 1s;
+  }
+
+  .homePage p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .navbar ul {
+    gap: 0.5rem;
+  }
+
+  .about p {
+    font-size: 0.8rem;
+  }
+
+  .firstLine {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homePage img {
+    width: 14rem;
+    height: 18rem;
+    border-radius: 0.5rem;
+    transition: 1s;
+  }
+
+  .highSchool,
+  .puc,
+  .engineering {
+    gap: 1.5rem;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .blog-list {
+    text-align: center;
+  }
+
+  .headingBorder::after {
+    left: 30%;
+  }
+
+  .headingBorder::before {
+    left: 30%;
+  }
+
+  .homePage p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  .navbar ul {
+    gap: 2rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+    transition: 1s;
+  }
+
+  .skill-icons .web-dev,
+  .skill-icons .design {
+    gap: 1rem;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 605px) {
+  .navbar a {
+    font-size: 0.6rem;
+  }
+
+  .about h2,
+  .education h2,
+  .projects h2,
+  .blogs h2,
+  .skills h2 {
+    font-size: 2rem;
+    transition: 1s;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+  }
+
+  .percentageBar {
+    margin-top: -2rem;
+  }
+
+  .qualification .highSchool span,
+  .qualification .puc span,
+  .qualification .engineering span {
+    display: block;
+  }
+
+  .headingBorder::after {
+    display: none;
+  }
+
+  .headingBorder::before {
+    display: none;
+  }
+
+  .fa-arrow-up {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-details {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .details h1 {
+    font-size: 1.5rem;
+    transition: 1s;
+    margin-left: 1rem;
+  }
+
+  .navbar {
+    margin-left: 1rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  .details h2 {
+    font-size: 1rem;
+  }
+
+  .details #Iam {
+    font-size: 1rem;
+  }
+
+  .skill-icons .fa-brands {
+    font-size: 3rem;
+  }
+
+  .skill-icons img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .contact-details {
+    gap: 0;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-details {
+    gap: 0;
+    margin-left: 1.5rem;
+  }
+
+  .navbar {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .contact-details {
+    gap: 0;
+    margin-left: 1.5rem;
+  }
+
+  .homePage p {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    margin-left: 1rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  .about h2,
+  .education h2,
+  .projects h2,
+  .blogs h2,
+  .skills h2 {
+    font-size: 1.5rem;
+    transition: 1s;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+  }
+
+  .details h1 {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+
+  .skill-icons .fa-brands {
+    font-size: 2rem;
+  }
+
+  .skill-icons img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .fa-arrow-up {
+    display: none;
+  }
+}
