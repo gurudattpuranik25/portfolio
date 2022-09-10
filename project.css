@@ -125,10 +125,6 @@ html {
   font-weight: 700;
 }
 
-.project-info .techStack {
-  padding-bottom: 1.5rem;
-}
-
 .project-info span {
   padding-right: 0.5rem;
   border: 1px solid gray;
@@ -142,9 +138,8 @@ html {
   cursor: pointer;
 }
 
-small {
-  font-size: 0.8rem;
-  font-weight: 100;
+.project-info a {
+  color: white;
 }
 
 .contact-details {
