@@ -7,5 +7,5 @@
 <li>The projects section hosts about 10 projects that are built using both Vanilla JavaScript and React framework. All the projects are hosted on Netlify and the live links are provided right below each project</li>
 <li>The blog section contains all my blogs written on Hashnode and Blogger.</li>
 <br/>
-<br/>
+
 [checkout my portfolio here](https://gurudatt-puranik-portfolio.netlify.app/)
